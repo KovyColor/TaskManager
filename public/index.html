@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Company Task Manager</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<aside class="sidebar" id="sidebar">
+  <h2>Task Manager</h2>
+  <button class="active" data-view="dashboard">Dashboard</button>
+  <button data-view="tasks">Tasks</button>
+  <button data-view="employees">Employees</button>
+  <button data-view="reports">Reports</button>
+  <button data-view="settings">Settings</button>
+</aside>
+
+<div class="main">
+  <div class="header">
+    <button class="menu-btn" onclick="toggleSidebar()">☰</button>
+    <h3>Company Task Manager</h3>
+  </div>
+
+  <div class="content">
+
+    <div id="view-dashboard" class="view active">
+      <div class="grid">
+        <div class="col col-left">
+          <section class="stats-section">
+            <h3 class="section-title">Overview <span class="icon">📊</span></h3>
+            <div class="stats">
+              <div class="stat"><h3>Total Tasks</h3><p id="total">0</p></div>
+              <div class="stat"><h3>High Priority</h3><p id="high">0</p></div>
+              <div class="stat"><h3>In Progress</h3><p id="progress">0</p></div>
+            </div>
+          </section>
+        </div>
+
+        <div class="col col-center">
+          <div class="panel create-panel">
+            <h3>Create Task <span class="icon">➕</span></h3>
+            <input id="title" placeholder="Title">
+            <textarea id="description" placeholder="Description"></textarea>
+            <input id="assignedTo" placeholder="Assigned to">
+            <input id="createdBy" placeholder="Created by">
+            <select id="priority">
+              <option value="low">Low</option>
+              <option value="medium">Medium</option>
+              <option value="high">High</option>
+            </select>
+
+            <select id="category" aria-label="Category">
+              <!-- populated by JS: server categories or defaults -->
+            </select>
+
+            <button class="main" onclick="createTask()">Add Task</button>
+          </div>
+
+          <div class="panel recent-panel">
+            <h3>Recent Tasks <span class="icon">🕒</span></h3>
+            <div id="recent-tasks" class="tasks"></div>
+          </div>
+        </div>
+
+        <div class="col col-right">
+          <div class="tasks-section">
+            <h3 class="section-title">All Tasks <span class="icon">📋</span></h3>
+            <div class="divider"></div>
+            <div class="tasks" id="tasks"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="view-tasks" class="view" hidden>
+      <div class="panel">
+        <h2>Tasks</h2>
+        <p class="muted">This view will show task management and filters (placeholder).</p>
+      </div>
+    </div>
+
+    <div id="view-employees" class="view" hidden>
+      <div class="panel">
+        <h2>Employees</h2>
+        <p class="muted">Manage employees and assignments (placeholder).</p>
+      </div>
+    </div>
+
+    <div id="view-reports" class="view" hidden>
+      <div class="panel">
+        <h2>Reports</h2>
+        <p class="muted">View reports and charts (placeholder).</p>
+      </div>
+    </div>
+
+    <div id="view-settings" class="view" hidden>
+      <div class="panel">
+        <h2>Settings</h2>
+        <p class="muted">Application settings and preferences (placeholder).</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script src="app.js" defer></script>
+
+</body>
+</html>
