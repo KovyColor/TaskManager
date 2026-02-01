@@ -199,11 +199,11 @@ Validation and error handling are implemented at the model and controller levels
 
 ✅ All Assignment 4 requirements have been fully implemented:
 
--MVC architecture
--Authentication
--RBAC
--Multi-object CRUD
--Postman Collection
+- MVC architecture
+- Authentication
+- RBAC
+- Multi-object CRUD
+- Postman Collection
 
 👨‍🎓 Author
 Assignment completed as part of a backend development course.
