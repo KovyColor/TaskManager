@@ -22,32 +22,56 @@ The main goal of the assignment is to demonstrate **MVC architecture**, **authen
 The project follows a clean **MVC structure**:
 
 ├── controllers/
-│ ├── authController.js
-│ ├── taskController.js
-│ └── categoryController.js
-│
-├── middleware/
-│ ├── authMiddleware.js
-│ └── adminMiddleware.js
-│
-├── models/
-│ ├── User.js
-│ ├── Task.js
-│ └── Category.js
-│
-├── routes/
-│ ├── auth.js
-│ ├── tasks.js
-│ └── categories.js
-│
-├── public/
-│ └── frontend files (HTML / CSS / JS)
-│
-├── .env.example
-├── server.js
-├── package.json
-└── README.md
 
+│ ├── authController.js
+
+│ ├── taskController.js
+
+│ └── categoryController.js
+
+│
+
+├── middleware/
+
+│ ├── authMiddleware.js
+
+│ └── adminMiddleware.js
+
+│
+
+├── models/
+
+│ ├── User.js
+
+│ ├── Task.js
+
+│ └── Category.js
+
+│
+
+├── routes/
+
+│ ├── auth.js
+
+│ ├── tasks.js
+
+│ └── categories.js
+
+│
+
+├── public/
+
+│ └── frontend files (HTML / CSS / JS)
+
+│
+
+├── .env.example
+
+├── server.js
+
+├── package.json
+
+└── README.md
 
 ---
 
